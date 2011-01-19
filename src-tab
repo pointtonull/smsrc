@@ -1,0 +1,31 @@
+#!/bin/sh
+#Adaptador para usar en crontab
+src 2>/dev/null
+exit
+
+if ps x|grep "src-tab"|grep -v grep|grep -v $$ &>/dev/null; then
+    sleep 30
+    Matar sh src-tab
+else
+    
+    if ps x|grep "src.py"|grep -v grep|grep -v $$ &>/dev/null; then
+
+        matar src.py
+
+        sleep 10
+
+        if ps x|grep "src.py"|grep -v grep|grep -v $$ &>/dev/null; then
+
+            matar python src.py
+
+            sleep 120
+            
+            if ps x|grep "src.py"|grep -v grep|grep -v $$ &>/dev/null; then
+                Matar python src.py
+
+            fi
+        fi
+    fi
+    ./src.py
+fi
+
