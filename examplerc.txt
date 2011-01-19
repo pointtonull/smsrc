@@ -1,0 +1,5 @@
+popserver:pop.mail.yahoo.com.ar
+popuser:elmaildemimaquina@yahoo.com.ar
+poppass:hackme
+smtpserver:smtp.mail.yahoo.com.ar
+responseto:mimail@gmail.com
